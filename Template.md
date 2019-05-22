@@ -1,7 +1,7 @@
 # About Template
 The template follows pillar (https://github.com/pillar-markup/pillar) markup for writing content.
 
-#Template
+# Class Comment Template
 
 ``Please comment me using the following template:
 
@@ -41,7 +41,7 @@ If you have other information about the class, you can use headers: !Warning, !P
 # More Details About Template
 - The template supports various headers. Developers can use existing header and can define their own headers for extra information.
 
-## Existing headers are:
+## Existing headers the template support are:
 !Extension
 Describe how you class can be extended further. 
 
@@ -63,7 +63,7 @@ Any recommendation for future maintaince, extensions, refactorings etc.
 !ToDo
 List your Todos here
 
-##Custom headers
+## Custom headers
 To define a custom header, you can use `!CustomeHeaderName`. Keep the header names short and precise.
 
 ## Embed extra information to the template
