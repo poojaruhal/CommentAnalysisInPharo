@@ -43,7 +43,7 @@ For example, the class ${class:OrderedCollection}$ is instantiated like:
 
 Warning, Precondition, Dependency, Observation, Recommendation, Extensions, ToDo.``
 
-## The template is rendered as https://github.com/poojaruhal/CommentAnalysisInPharo/images/New-template.jpg
+## The template is rendered as https://github.com/poojaruhal/CommentAnalysisInPharo/blob/master/images/New-template.jpg
 
 # More Details About Template
 - The template supports various headers. Developers can use existing header and can define their own headers for extra information.
