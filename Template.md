@@ -1,7 +1,8 @@
-#About Template
+# About Template
 The template follows pillar (https://github.com/pillar-markup/pillar) markup for writing content.
 
 #Template
+
 ``Please comment me using the following template:
 
 !Intent  
@@ -30,8 +31,8 @@ How to instantiate and use the class?
  !Implementation notes(if Any)
 - Describe internal details and representations here.
 
-!Reference to other resources
-@@see 
+``!Reference to other resources
+@@see *TemplateInstructions>https://github.com/poojaruhal/CommentAnalysisInPharo/edit/master/Template.md*
 *http://pharo.org*
 
 If you have other information about the class, you can use headers: !Warning, !Precondition, !Dependency, !Observation, !Recommendation, !Extensions !ToDo.``
