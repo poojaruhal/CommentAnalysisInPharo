@@ -70,7 +70,7 @@ To define a custom header, you can use `!CustomeHeaderName`. Keep the header nam
 -Add description list
 ``!Public API and their usage
 ; API one
-: description of API one   
+: description of API one
 ; API two
 : description of API two``
 
