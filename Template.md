@@ -3,40 +3,47 @@ The template follows pillar (https://github.com/pillar-markup/pillar) markup for
 
 # Class Comment Template
 
-``Please comment me using the following template:
+``
+!Please comment me using the following template:
 
-!Intent  
+!!Intent  
 Who am I? What is my purpose?
 
-!Responsibility
+!!Responsibility
 Three sentences about main responsibilities - what I do, what I know.
 
 !!Usage of the class
 How to instantiate and use the class?
-[ [ [ 
-            Write code snippets inside brackets..
-             ] ] ]
+For example, the class ${class:OrderedCollection}$ is instantiated like:
 
-!Public API and their usage
-; API one
-: description of API one   
-; API two
+[ [ [ 
+			"Write code snippet here"
+
+			aCollection := OrderedCollection new:5.
+] ] ]
+
+!!Public API and their usage
+;API one
+:description of API one   
+;API two
 : description of API two   
 
-!Instance Variables
+!!Instance Variables
     edges:        <Object>
     nodes:        <Object>
-
-
- !Implementation notes(if Any)
+            
+!!Implementation notes(if Any)
 - Describe internal details and representations here.
 
-``!Reference to other resources
-@@see *TemplateInstructions>https://github.com/poojaruhal/CommentAnalysisInPharo/edit/master/Template.md*
-*http://pharo.org*
+`` !!Reference to other resources
+*Further-Template-Instructions>https://github.com/poojaruhal/CommentAnalysisInPharo/edit/master/Template.md http://pharo.org*
 
-If you have other information about the class, you can use headers: !Warning, !Precondition, !Dependency, !Observation, !Recommendation, !Extensions !ToDo.``
 
+!!If you have other information about the class, you can use headers: 
+
+Warning, Precondition, Dependency, Observation, Recommendation, Extensions, ToDo.``
+
+The template is rendered as https://github.com/poojaruhal/CommentAnalysisInPharo/images/template.png
 
 # More Details About Template
 - The template supports various headers. Developers can use existing header and can define their own headers for extra information.
