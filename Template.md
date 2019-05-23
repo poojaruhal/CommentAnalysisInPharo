@@ -41,7 +41,7 @@ For example, the class ${class:OrderedCollection}$ is instantiated like:
 - Describe internal details and representations here.
 
 `` !!Reference to other resources
-*Further-Template-Instructions>https://github.com/poojaruhal/CommentAnalysisInPharo/edit/master/Template.md http://pharo.org*
+*Further-Template-Instructions>https://github.com/poojaruhal/CommentAnalysisInPharo/edit/master/Template.md*
 
 
 !!If you have other information about the class, you can use headers: 
