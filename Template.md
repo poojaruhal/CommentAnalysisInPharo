@@ -88,7 +88,6 @@ This section contains details about the implementation specific points for the c
 
 #The template supports various headers. Developers can use existing header and can define their own headers for extra information.
 
-<<<<<<< HEAD
 ## Existing extra headers the template supports are:
 !Extension
 Describe how you class can be extended further. 
