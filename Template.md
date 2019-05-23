@@ -47,7 +47,7 @@ For example, the class ${class:OrderedCollection}$ is instantiated like:
 !!If you have other information about the class, you can use headers: 
 Warning, Precondition, Dependency, Observation, Recommendation, Extensions, ToDo.``
 
-## The template is rendered as https://github.com/poojaruhal/CommentAnalysisInPharo/images/template.png
+## The template is rendered as https://github.com/poojaruhal/CommentAnalysisInPharo/blob/master/images/New-template.jpg
 
 # More Details About Template
 In this section we cover more examples about each section, what each section expects.
@@ -88,26 +88,27 @@ This section contains details about the implementation specific points for the c
 
 #The template supports various headers. Developers can use existing header and can define their own headers for extra information.
 
+<<<<<<< HEAD
 ## Existing extra headers the template supports are:
 !Extension
 Describe how you class can be extended further. 
 
-!Warning
+!!Warning
 Mention the warnings about you classes. The points other developers, readers should pay attention to.
 
-!Precondition
+!!Precondition
 Describe the precondition of your class and its APIs
 
-!Dependency
+!!Dependency
 State all the dependencies of your class.
 
-!Observation
+!!Observation
 State your observation about the class behaviors.
 
-!Recommnedation
+!!Recommnedation
 Any recommendation for future maintaince, extensions, refactorings etc.
 
-!ToDo
+!!ToDo
 List your Todos here
 
 ## Custom headers

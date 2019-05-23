@@ -25,3 +25,4 @@ Code comments play a paramount role in program comprehension, development, and m
 
 # Description of the content:
 1. "Data" folder contains the data selected for analysing the comments.
+2. 'Template.md' describes the new proposed template https://github.com/poojaruhal/CommentAnalysisInPharo/blob/master/images/New-template.jpg with instructions details.
