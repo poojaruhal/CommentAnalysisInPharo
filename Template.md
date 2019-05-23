@@ -23,16 +23,21 @@ For example, the class ${class:OrderedCollection}$ is instantiated like:
 ] ] ]
 
 !!Public API and their usage
-;API one
-:description of API one   
-;API two
-: description of API two   
+; ApiOne
+: description of #ApiOne 
+  
+; ApiTwo
+: description of #ApiTwo   
+ 
 
 !!Instance Variables
-    edges:        <Object>
-    nodes:        <Object>
+; edges <Object>
+: description of edges
+
+; nodes <Object>
+: description of nodes
             
-!!Implementation notes(if Any)
+!!Implementation notes
 - Describe internal details and representations here.
 
 `` !!Reference to other resources
@@ -40,15 +45,50 @@ For example, the class ${class:OrderedCollection}$ is instantiated like:
 
 
 !!If you have other information about the class, you can use headers: 
-
 Warning, Precondition, Dependency, Observation, Recommendation, Extensions, ToDo.``
 
 ## The template is rendered as https://github.com/poojaruhal/CommentAnalysisInPharo/images/template.png
 
 # More Details About Template
-- The template supports various headers. Developers can use existing header and can define their own headers for extra information.
+In this section we cover more examples about each section, what each section expects.
 
-## Existing headers the template support are:
+!!Intent  
+This section contains information about the purpose of the class.
+
+!!Responsibility
+E.g I know about browser class. I implement basic bahavior.
+
+!!Usage of the class
+How to instantiate and use the class?
+For example, the class ${class:OrderedCollection}$ is instantiated like:
+
+[ [ [ 
+			"Write code snippet here"
+
+			aCollection := OrderedCollection new:5.
+] ] ]
+
+!!Public API and their usage
+; collectValues
+: Collect values from the object and return a new collection.
+ 
+ 
+
+!!Instance Variables
+; edges <Object>
+: edges connect two nodes.
+
+; nodes <Object>
+: a list of graph nodes 
+            
+!!Implementation notes
+This section contains details about the implementation specific points for the class.
+- e.g The formula used to calculate size =  2 * wi * pi.
+
+
+#The template supports various headers. Developers can use existing header and can define their own headers for extra information.
+
+## Existing extra headers the template supports are:
 !Extension
 Describe how you class can be extended further. 
 
