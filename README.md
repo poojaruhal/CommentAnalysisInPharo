@@ -24,5 +24,10 @@ Code comments play a paramount role in program comprehension, development, and m
 
 
 # Description of the content:
-1. "Data" folder contains the data selected for analysing the comments.
-2. 'Template.md' describes the new proposed template https://github.com/poojaruhal/CommentAnalysisInPharo/blob/master/images/New-template.jpg with instructions details.
+1. "Analyser" folder contains the tool Moose, which is used to perform the analysis, Pharo "Scripts" and "Data" to run various analysis.
+
+2. "Analyser/Data" folder contains the data selected for analysing the comments and resultant data after analysis.
+3. "Analyser/Scripts"contains Pharo scripts to analyse the classes of all versions.
+4. "Results" contains the result of the studies performed in the paper.
+
+5. 'Template.md' describes the new proposed template https://github.com/poojaruhal/CommentAnalysisInPharo/blob/master/images/New-template.jpg with instructions details.
