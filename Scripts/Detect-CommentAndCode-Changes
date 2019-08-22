@@ -1,0 +1,85 @@
+reader := NeoCSVReader on: '/CommentAnalysisInPharo/Data/Classes-Definition/2-ClassDefinitions.csv' asFileReference readStream.
+classDefv1 := reader upToEnd.
+reader close.
+
+reader := NeoCSVReader on: '/CommentAnalysisInPharo/Data/Classes-Definition/3-ClassDefinitions.csv' asFileReference readStream.
+classDefv2 := reader upToEnd.
+reader close.
+
+classDefv1 := ((classDefv1 groupedBy: [ :e | e first ]) associations collect: [ :f |  f key -> (f value collect: [:m | 
+		 {m second. m third} ]) flatten]) sorted: [ :a :b |  a key < b key ].
+classDefv2 := ((classDefv2 groupedBy: [ :e | e first ]) associations collect: [ :f |  f key -> (f value collect: [:m | 
+		 {m second. m third} ]) flatten]) sorted: [ :a :b |  a key < b key ].
+
+classChanges := (classDefv2 select: [ :e | 
+	((classDefv1 collect:#key) includes: e key)] thenCollect: [  :e | 
+		
+	def1 := (classDefv1 detect: [ :c | e key = c key ]) value.
+	def2 := (classDefv2 detect: [ :c | e key = c key ]) value.
+	def1 = def2
+		ifTrue: [ 
+			"e key -> #ClassDefinitionSame"
+			 e key -> #False]
+		ifFalse: [
+					e key -> #True
+					]])
+ groupedBy: [ :e | e value ].
+
+pharo7ClassDef := classChanges.
+pharo6ClassDef := classChanges.
+pharo5ClassDef := classChanges.
+pharo4ClassDef := classChanges.
+pharo3ClassDef := classChanges.
+pharo2ClassDef := classChanges.
+
+reader := NeoCSVReader on: '/CommentAnalysisInPharo/Data/Methods-definition/2-MethodsDefinition.csv' asFileReference readStream.
+v1 := reader upToEnd.
+reader close.
+
+reader := NeoCSVReader on: '/CommentAnalysisInPharo/Data/Methods-definition/3-MethodsDefinition.csv' asFileReference readStream.
+v2 := reader upToEnd.
+reader close.
+
+v1 := ((v1 groupedBy: [ :e | e first ]) associations collect: [ :f |  f key -> (f value collect: [:m |  {m third.m second. m fourth}])]) sorted: [ :a :b |  a key < b key ].
+v2 := ((v2 groupedBy: [ :e | e first ]) associations collect: [ :f |  f key -> (f value collect: [:m | 
+		 {m third.m second. m fourth}])]) sorted: [ :a :b |  a key < b key ].
+
+
+methodChanges := v2 select: [ :e | 
+	((v1 collect:#key) includes: e key)] thenCollect: [  :e | 
+		c1Methods := ((v1 detect: [:a | a key = e key]) value) sorted: [ :a :b | a first < b first ]. 
+		c2Methods := (e value)sorted: [ :a :b | a first < b first ]. 
+	
+		((c1Methods = c2Methods) or: [((c1Methods difference: c2Methods) isEmpty and: [(c2Methods difference: c1Methods)isEmpty])]) 
+		ifTrue: [ e key -> #False]
+		ifFalse: [  
+			e key -> #True]].
+(methodChanges groupedBy: [ :e | e value ]).
+
+pharo2MethodChanges := methodChanges.
+pharo3MethodChanges := methodChanges.
+pharo4MethodChanges := methodChanges.
+pharo5MethodChanges := methodChanges.
+pharo6MethodChanges := methodChanges.
+pharo7MethodChanges := methodChanges.
+
+allPharos := MooseModel root allModels.
+
+codeChanges := (((pharo2MethodChanges, pharo2ClassDef) groupedBy: #key) collect: [:e | e value collect: #value ]) associations select: [ :e | (e value reject:[:g | g = #False ]) isNotEmpty].
+
+commentChanges := (((allPharos at: 2) moCaModelClassesCommentChangedSince: (allPharos at:1)) associations collect: [ :e | e key -> (e value associations flatCollect: [ :f | f value collect: [  :g | g name  ]])]).
+comc := (commentChanges flatCollect: [ :e | e value ]).
+
+codeAndCommentChanges := codeChanges select: [ :e | comc includes: e key].
+
+onlyCodeChanged := codeChanges reject: [:e | comc includes: e key].
+
+onlyCommentChanged := comc reject: [:e | (codeChanges collect: #key) includes: e].
+
+oldClassChanged := ((codeChanges collect:#key) union: comc)asSet.
+
+oldClasses := ((allPharos at: 2) moCaModelClassesSameSince: (allPharos at:1)).
+
+oldClassesUnchanged := (oldClasses collect:#name) difference: oldClassChanged.
+
+
