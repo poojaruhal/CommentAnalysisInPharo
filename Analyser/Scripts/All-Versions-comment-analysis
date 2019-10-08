@@ -27,47 +27,6 @@ allVersionedChanges := (allVersionedClasses associations collect: [ :e |
 					ifFalse: [ commentExists ifTrue: [ #commentAdded ] ifFalse: [ #commentRemoved ]]))]].
 			e key -> changes asOrderedDictionary ]) asDictionary.
 	
-"classes added without comments"
-classesAddedWithoutComments := 
-(((allVersionedChanges values select: [ :e |
-e associations first value key = #nocomment])groupedBy: [ :e | e associations first key])associations sort: [ :a :b | a key < b key ])asDictionary . 
-
-"A graph to visualize classes that are added without comments"
-b := RTGrapher new.
-ds := RTData new.
-ds barShape color: Color blue.
-ds points: classesAddedWithoutComments associations.
-ds x: #key.
-ds y: [ :e | e value size ].
-ds interaction noInteractions.
-b add: ds.
-b axisX noTick.
-b axisY noDecimal.
-b build.
-
-
-classesAddedInEachVersion := 
-((((allVersionedChanges associations select: [ :e |
-e value associations first value value = #classAdded])groupedBy: [ :e | e value associations value first key])associations sort: [ :a :b | a key < b key ])asDictionary)associations collect: [ :e | e key -> (e value collect: [:g | g key])]..
-
-
-classesAddedInEachVersionWithPackageName := ((classesAddedInEachVersion collect: [ :e |
-	|withPackageName|
-	withPackageName :=  
-					((allPharos
-						withIndexCollect: [ :f :i | 
-							e key = i
-								ifTrue: [ e value
-										collect: [ :c | 
-											| modelClass |
-											modelClass := f allModelClasses
-												detect: [ :g | g name = c ].
-											modelClass parentPackage name -> c] ] ]
-								) reject: [ :f | f isNil ])flatten.
-								e key -> withPackageName]))asOrderedCollection.
-							
-classesAddedInEachVersionWithPackageName collect:[:e|	
-		((e value groupedBy: [ :g  | ('-' split: g key) first ]) associations sorted: [ :a :b | a value size > b value size ]) asOrderedDictionary].					
 
 commentsAddedInLaterVersion := 
 (allVersionedChanges
@@ -75,69 +34,11 @@ commentsAddedInLaterVersion :=
 [ :e | e key -> (e value associations select: [ :g | g  value key = #comment  and: [ g value value = #commentAdded  ] ])
 	])reject: [ :e | e value isEmpty ].
 
-commentAddedPerVersion :=  ((commentsAddedInLaterVersion  collect: 
-	[ :e | e key ->  (e value first key)]) groupedBy: [:e | e value]).
-
 commentChanged := 
 ((allVersionedChanges
  associations collect: [ :e |
 	f := (e value associations select: [ :a | ((a value key = #comment) and: [ a value value = #changed ])]).
 	 e key -> f ])asDictionary) reject: [ :e | e value isEmpty].
-
-commentChangedPerVersion :=  ((commentChanged associations flatCollect: [ :e |  e value collect: [ :c | e key -> c key ]]) groupedBy: [:e | e value]).
-
-commentChangedPerVersionWithPackageName := ((commentChangedPerVersion associations collect: [ :e |
-	|withPackageName|
-	withPackageName :=  
-					((allPharos
-						withIndexCollect: [ :f :i | 
-							e key = i
-								ifTrue: [ e value
-										collect: [ :c | 
-											| modelClass |
-											modelClass := f allModelClasses
-												detect: [ :g | g name = c key ].
-											modelClass parentPackage name -> c ] ] ]
-								) reject: [ :f | f isNil ])flatten.
-								e key -> withPackageName])flatCollect: [ :g | g value ]) asOrderedCollection .
-
-commentAddedPerVersionWithPackageName := ((commentAddedPerVersion associations collect: [ :e |
-	|withPackageName|
-	withPackageName :=  
-					((allPharos
-						withIndexCollect: [ :f :i | 
-							e key = i
-								ifTrue: [ e value
-										collect: [ :c | 
-											| modelClass |
-											modelClass := f allModelClasses
-												detect: [ :g | g name = c key ].
-											modelClass parentPackage name -> c ] ] ]
-								) reject: [ :f | f isNil ])flatten.
-								e key -> withPackageName])flatCollect: [ :g | g value ]) asOrderedCollection .
-
-commentAddedPerVersionWithPackageName groupedBy: [ :g | g value value  ].
-
-(((commentAddedPerVersion at:6) collect: [ :g | g key ]) difference: ((commentChangedPerVersion at:6) collect: [ :g | g key ])).
-
-writer := NeoCSVWriter on: 'Comment-Analysis/Data/Classes-comment-added-per-version.csv' asFileReference writeStream.
-writer
-	writeHeader: #(version package class);
-	addField: [ :e | e value value ];
-	addField: [ :e | e key ];
-		addField: [ :e | e value key ];
-	nextPutAll: commentAddedPerVersionWithPackageName;
-	close.
-	
-writer := NeoCSVWriter on: 'Comment-Analysis/Data/Classes-comment-changed-per-version.csv' asFileReference writeStream.
-writer
-	writeHeader: #(version package class);
-	addField: [ :e | e value value ];
-	addField: [ :e | e key ];
-		addField: [ :e | e value key ];
-	nextPutAll: commentChangedPerVersionWithPackageName;
-	close.
-
 
 
 

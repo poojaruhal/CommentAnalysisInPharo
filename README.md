@@ -1,33 +1,21 @@
-# Code Comment Practices and Evolution: the Case of the Pharo Ecosystem
+# Class Comment Evolution and Practices in Pharo
 
 # Abstract
-
-Code comments play a paramount role in program comprehension, development, and maintenance tasks.
-    Given their unstructured (or semi-structured)  nature and varying quality,  
-     researchers have analyzed characteristics of comments in different programming languages, to ensure a high quality of comments.
-    However, no previous work has analyzed these characteristics in the Pharo program language,
-    where commenting evolutionary patterns are not known and best practices are still forming.
-    For instance, Pharo developers are guided by a semi-structured template to write a class comment, but the actual impact of this template in the developers' commenting practices is unclear.
-    
-    This paper reports the first empirical study investigating class-comment evolution and commenting practices characterizing Pharo.
-    This investigation is critical to define approaches that ensure a high-quality of code comments in this ecosystem.
-    As a first step, we analyze class comment evolution over seven Pharo versions.
-    Then, we quantitatively and qualitatively analyze class comments of the most recent version of Pharo,  to investigate potential information types in Pharo comments.
-    Finally, we study the impact of the class template on the developers' commenting practices.     
-    
-    Our results show that the percentage of commented classes increases over time, with developers adding comments to old classes.
-    We find that Pharo template has an impact on developers commenting practices.
-    Interestingly, Pharo class comments are characterized by 23 information types, and only seven of them are included in the Pharo template.
-    This highlights that the Pharo template substantially diverges from contemporary practices of developers,
-    Therefore, we suggest that additional information types should be included in the standard template to ensure a high-quality of class comments.
-
+Previous studies have characterised code comments in different programming languages, and  have shown
+how a high quality of code comments is crucial to support program comprehension activities and to improve the effectiveness of maintenance tasks.
+However, (i) very few studies have focused on the analysis of the information embedded in class comments, and (ii) none of them have analyzed these characteristics in the Pharo Smalltalk environment.
+       
+This paper reports the first empirical study investigating class comments and commenting practices in Pharo.
+Results of this study show that there is a steady increase in class commenting over time, and that developers frequently add comments to old classes in Pharo.
+In addition, the analysis of the semantics of the comments from the latest Pharo version suggests that  23 information types are typically embedded in class comments by developers, and that only 7 of them are present in the latest Pharo class comment template.
+As a consequence, the current class comment template substantially diverges from the contemporary commenting practices of developers,  suggesting the need for new Pharo templates integrating the missing information types, to ensure a higher quality of class comments.
 
 
 # Description of the content:
 1. "Analyser" folder contains the tool Moose, which is used to perform the analysis, Pharo "Scripts" and "Data" to run various analysis.
 
 2. "Analyser/Data" folder contains the data selected for analysing the comments and resultant data after analysis.
-3. "Analyser/Scripts"contains Pharo scripts to analyse the classes of all versions.
-4. "Results" contains the result of the studies performed in the paper.
 
-5. 'Template.md' describes the new proposed template https://github.com/poojaruhal/CommentAnalysisInPharo/blob/master/images/New-template.jpg with instructions details.
+3. "Analyser/Scripts"contains Pharo scripts to analyse the classes of all versions.
+
+4. "Results" contains the result of the studies performed in the paper.
