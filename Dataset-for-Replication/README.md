@@ -12,11 +12,9 @@ As a consequence, the current class comment template substantially diverges from
 
 
 # Description of the content:
-1. "Dataset-for-Replication" folder contains the tool Moose, which is used to perform the analysis, Pharo "Scripts" and the raw "Data" to run various analysis.
+1. "Dataset-for-Replication" folder contains the tool Moose, which is used to perform the analysis, Pharo "Scripts" and "Data" to run various analysis.
 
 2. "/Data" folder contains the data selected for analysing the comments and resultant data after analysis.
 
 3. "/Scripts" contains Pharo scripts to analyse the classes of all versions.
-
-4. "Results/" contains the results acheived study-wise and the distribution of the data.
 

@@ -12,11 +12,11 @@ As a consequence, the current class comment template substantially diverges from
 
 
 # Description of the content:
-1. "Dataset-for-Replication" folder contains the tool Moose, which is used to perform the analysis, Pharo "Scripts" and the raw "Data" to run various analysis.
+1. "Results" contains the result of the studies performed in the paper.
 
-2. "/Data" folder contains the data selected for analysing the comments and resultant data after analysis.
+2. "commen-distribution" folder contains the plots to show distribution of comments availble in Pharo 7 according to sentence length and frequency of comments.
 
-3. "/Scripts" contains Pharo scripts to analyse the classes of all versions.
+3. "pilot-study" folder contains the dataset manually classified in the pilot study and the result achived for it.
 
-4. "Results/" contains the results acheived study-wise and the distribution of the data.
+4. "taxonomy-study" folder contains the dataset manually classified in the taxonomy study by three evaluators and the result achived for it. 
 
