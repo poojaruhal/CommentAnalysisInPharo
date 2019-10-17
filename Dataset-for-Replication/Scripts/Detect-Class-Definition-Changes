@@ -1,14 +1,13 @@
-reader := NeoCSVReader on: '/CommentAnalysisInPharo/Data/Code-changes/Classes-Definition/2-ClassDefinitions.csv' asFileReference readStream.
+reader := NeoCSVReader on: (Smalltalk imageDirectory  / '../Data/Code-changes/Classes-Definition/2-ClassDefinitions.csv') asFileReference readStream.
 v1 := reader upToEnd.
 reader close.
 
-reader := NeoCSVReader on: '/CommentAnalysisInPharo/Data/Code-changes/Classes-Definition/3-ClassDefinitions.csv' asFileReference readStream.
+reader := NeoCSVReader on: (Smalltalk imageDirectory  / '../Data/Code-changes/Classes-Definition/3-ClassDefinitions.csv') asFileReference readStream.
 v2 := reader upToEnd.
 reader close.
 
 v1 := (v1 collect: [ :e | e first -> { e second .  e third } ]) sorted: [:a :b | a key < b key].
 v2 := (v2 collect: [ :e | e first -> { e second .  e third } ]) sorted: [:a :b | a key < b key].  
-
 
 
 classChanges := (v2 select: [ :e | 

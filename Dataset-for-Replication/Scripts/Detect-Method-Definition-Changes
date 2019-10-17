@@ -1,8 +1,8 @@
-reader := NeoCSVReader on: '/CommentAnalysisInPharo/Data/Methods-definition/2-MethodsDefinition.csv' asFileReference readStream.
+reader := NeoCSVReader on: (Smalltalk imageDirectory  / '../Data/Code-changes/Classes-Definition/2-MethodsDefinition.csv') asFileReference readStream.
 v1 := reader upToEnd.
 reader close.
 
-reader := NeoCSVReader on: '/Users/poojarani/gitProjects/CommentAnalysisInPharo/Data/Methods-definition/3-MethodsDefinition.csv' asFileReference readStream.
+reader := NeoCSVReader on: (Smalltalk imageDirectory  / '../Data/Code-changes/Classes-Definition/3-MethodsDefinition.csv') asFileReference readStream.
 v2 := reader upToEnd.
 reader close.
 

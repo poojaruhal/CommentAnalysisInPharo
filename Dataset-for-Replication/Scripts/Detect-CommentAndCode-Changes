@@ -1,8 +1,8 @@
-reader := NeoCSVReader on: '/CommentAnalysisInPharo/Data/Classes-Definition/2-ClassDefinitions.csv' asFileReference readStream.
+reader := NeoCSVReader on: (Smalltalk imageDirectory  / '../Data/Code-changes/Classes-Definition/2-ClassDefinitions.csv') asFileReference readStream.
 classDefv1 := reader upToEnd.
 reader close.
 
-reader := NeoCSVReader on: '/CommentAnalysisInPharo/Data/Classes-Definition/3-ClassDefinitions.csv' asFileReference readStream.
+reader := NeoCSVReader on: (Smalltalk imageDirectory  / '../Data/Code-changes/Classes-Definition/3-ClassDefinitions.csv') asFileReference readStream.
 classDefv2 := reader upToEnd.
 reader close.
 
@@ -32,11 +32,11 @@ pharo4ClassDef := classChanges.
 pharo3ClassDef := classChanges.
 pharo2ClassDef := classChanges.
 
-reader := NeoCSVReader on: '/CommentAnalysisInPharo/Data/Methods-definition/2-MethodsDefinition.csv' asFileReference readStream.
+reader := NeoCSVReader on: (Smalltalk imageDirectory  / '../Data/Code-changes/Classes-Definition/2-MethodsDefinition.csv') asFileReference readStream.
 v1 := reader upToEnd.
 reader close.
 
-reader := NeoCSVReader on: '/CommentAnalysisInPharo/Data/Methods-definition/3-MethodsDefinition.csv' asFileReference readStream.
+reader := NeoCSVReader on: (Smalltalk imageDirectory  / '../Data/Code-changes/Classes-Definition/3-MethodsDefinition.csv') asFileReference readStream.
 v2 := reader upToEnd.
 reader close.
 

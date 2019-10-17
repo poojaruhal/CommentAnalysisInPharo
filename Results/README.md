@@ -1,6 +1,6 @@
-# Class Commenting Practices in Pharo
+# Replication Package for the paper entitled “Class Commenting Practices in Pharo"
 
-# Abstract
+# Abstract:
 Previous studies have characterised code comments in different programming languages, and  have shown
 how a high quality of code comments is crucial to support program comprehension activities and to improve the effectiveness of maintenance tasks.
 However, (i) very few studies have focused on the analysis of the information embedded in class comments, and (ii) none of them have analyzed these characteristics in the Pharo Smalltalk environment.
@@ -12,11 +12,16 @@ As a consequence, the current class comment template substantially diverges from
 
 
 # Description of the content:
-1. "Results" contains the result of the studies performed in the paper.
+1. "Results" is the main folder and contains the result of the studies performed in the paper.
 
-2. "commen-distribution" folder contains the plots to show distribution of comments availble in Pharo 7 according to sentence length and frequency of comments.
+2. "commen-distribution" folder contains the plots to show distribution of comments available in Pharo 7 according to sentence length and frequency of comments.
+    a) "comment-distribution-boxplot.pdf" shows the boxplot of distribution of average sentences in class comments
+    b) "comment-distribution-respect-to-sentence-frequency.pdf" shows  the distribution of sentences in relation to the frequency of comments
 
-3. "pilot-study" folder contains the dataset manually classified in the pilot study and the result achived for it.
-
-4. "taxonomy-study" folder contains the dataset manually classified in the taxonomy study by three evaluators and the result achived for it. 
-
+3. "pilot-study" folder contains the dataset manually classified during the pilot study (by one evaluator) and the result achieved for it.
+    a) "pilot-study-categories.pdf" plots the frequencies of comment types frequencies achieved considering the classes considered for the pilot study.
+    b) "Pilot-study-result.xlsx"  consists in the raw data of the pilot study performed to achieve the initial comment categories (names of columns are self-explanatory)
+    
+4. "taxonomy-study" folder contains the dataset manually classified in the taxonomy study (by three evaluators) and the result achieved for it. 
+    a) "All-categories-with-examples.pdf" this document describes all the categories in a more detailed manner with examples.
+    b) "Taxonomoy-study-results.xlsx" consists in the raw data of the taxonomy study performed to achieve the final comment categories (names of columns are self-explanatory)
