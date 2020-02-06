@@ -1,0 +1,7 @@
+"name_groups","p_value","magnitude"
+"Wilcox.test between Pharo1 & Pharo2-3",0.873440818846711,"Vargha and Delaney A = negligible"
+"Wilcox.test between Pharo1 & Pharo4",0.881293520007109,"Vargha and Delaney A = negligible"
+"Wilcox.test between Pharo1 & Pharo5-6-7",0.0673716852373396,"Vargha and Delaney A = large"
+"Wilcox.test between Pharo2-3 & Pharo4",0.881316583203568,"Vargha and Delaney A = negligible"
+"Wilcox.test between Pharo2-3 & Pharo5-6-7",0.26397894919107,"Vargha and Delaney A = small"
+"Wilcox.test between Pharo4 & Pharo5-6-7",0.144280944233897,"Vargha and Delaney A = small"

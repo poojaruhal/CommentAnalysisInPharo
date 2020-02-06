@@ -1,0 +1,264 @@
+----------------------------------------------
+Pharo 1 Instance Side:
+----------------------------------------------
+House has not been documented yet. The class comment should describe the purpose of the class, its collaborations and its variables.
+
+Instance Variables:
+	door	<ProtoObject>
+
+Class Instance Variables:
+	floor	<ProtoObject>
+
+----------------------------------------------
+Pharo 1 Class side:
+----------------------------------------------
+House has not been documented yet. The class comment should describe the purpose of the class, its collaborations and its variables.
+
+Instance Variables:
+	door	<ProtoObject>
+
+Class Instance Variables:
+	floor	<ProtoObject>
+
+
+----------------------------------------------
+----------------------------------------------
+Pharo 2 Instance Side:
+----------------------------------------------
+A House is xxxxxxxxx.
+
+Instance Variables
+	door:		<Object>
+
+door
+	- xxxxx
+
+
+----------------------------------------------
+Pharo 2 Class Side:
+----------------------------------------------
+A House class is xxxxxxxxx.
+
+Instance Variables
+	floor:		<Object>
+
+floor
+	- xxxxx
+
+
+----------------------------------------------
+----------------------------------------------
+Pharo 3 Instance Side:
+----------------------------------------------
+A House is xxxxxxxxx.
+
+Instance Variables
+	door:		<Object>
+
+door
+	- xxxxx
+
+Pharo 3 CS:
+A House class is xxxxxxxxx.
+
+Instance Variables
+	floor:		<Object>
+
+floor
+	- xxxxx
+
+
+----------------------------------------------
+----------------------------------------------
+Pharo 4 Instance Side:
+----------------------------------------------
+Please comment me using the following template inspired by Class Responsibility Collaborator (CRC) design:
+
+For the Class part:  State the name of the class with one line description: For example, I'm xxx the root of the hierarchy of visitor objects.
+
+For the Responsibility part: Three sentences about my main responsibility, what I'm doing, what services do I offer.
+
+For the Collaborators Part: State my main collaborators and one line about how I interact with them. 
+
+Public API and Key Messages
+
+- message one   
+- message two 
+- what is the way to create instances is a plus.
+
+   One simple example is simply gorgeous.
+ 
+Internal Representation and Key Implementation Points.
+
+    Instance Variables
+	door:		<Object>
+
+
+    Implementation Points
+
+----------------------------------------------
+Pharo 4 Class side:
+----------------------------------------------
+Please comment me using the following template inspired by Class Responsibility Collaborator (CRC) design:
+
+For the Class part:  State the name of the class with one line description: For example, I'm xxx the root of the hierarchy of visitor objects.
+
+For the Responsibility part: Three sentences about my main responsibility, what I'm doing, what services do I offer.
+
+For the Collaborators Part: State my main collaborators and one line about how I interact with them. 
+
+Public API and Key Messages
+
+- message one   
+- message two 
+- what is the way to create instances is a plus.
+
+   One simple example is simply gorgeous.
+ 
+Internal Representation and Key Implementation Points.
+
+    Instance Variables
+	floor:		<Object>
+
+
+    Implementation Points
+
+----------------------------------------------
+----------------------------------------------
+Pharo 5 Instance Side:
+----------------------------------------------
+Please comment me using the following template inspired by Class Responsibility Collaborator (CRC) design:
+
+For the Class part:  State a one line summary. For example, "I represent a paragraph of text".
+
+For the Responsibility part: Three sentences about my main responsibilities - what I do, what I know.
+
+For the Collaborators Part: State my main collaborators and one line about how I interact with them. 
+
+Public API and Key Messages
+
+- message one   
+- message two 
+- (for bonus points) how to create instances.
+
+   One simple example is simply gorgeous.
+ 
+Internal Representation and Key Implementation Points.
+
+    Instance Variables
+	door:		<Object>
+
+
+    Implementation Points
+
+
+----------------------------------------------
+ Pharo 5 Class Side:
+ ----------------------------------------------
+Please comment me using the following template inspired by Class Responsibility Collaborator (CRC) design:
+
+For the Class part:  State a one line summary. For example, "I represent a paragraph of text".
+
+For the Responsibility part: Three sentences about my main responsibilities - what I do, what I know.
+
+For the Collaborators Part: State my main collaborators and one line about how I interact with them. 
+
+Public API and Key Messages
+
+- message one   
+- message two 
+- (for bonus points) how to create instances.
+
+   One simple example is simply gorgeous.
+ 
+Internal Representation and Key Implementation Points.
+
+    Instance Variables
+	floor:		<Object>
+
+
+    Implementation Points
+
+----------------------------------------------
+----------------------------------------------
+Pharo 6 Instance Side:
+----------------------------------------------
+Please comment me using the following template inspired by Class Responsibility Collaborator (CRC) design:
+
+For the Class part:  State a one line summary. For example, "I represent a paragraph of text".
+
+For the Responsibility part: Three sentences about my main responsibilities - what I do, what I know.
+
+For the Collaborators Part: State my main collaborators and one line about how I interact with them. 
+
+Public API and Key Messages
+
+- message one   
+- message two 
+- (for bonus points) how to create instances.
+
+   One simple example is simply gorgeous.
+ 
+Internal Representation and Key Implementation Points.
+
+    Instance Variables
+	door:		<Object>
+
+
+    Implementation Points
+
+----------------------------------------------
+Pharo 6 Class Side:
+----------------------------------------------
+Please comment me using the following template inspired by Class Responsibility Collaborator (CRC) design:
+
+For the Class part:  State a one line summary. For example, "I represent a paragraph of text".
+
+For the Responsibility part: Three sentences about my main responsibilities - what I do, what I know.
+
+For the Collaborators Part: State my main collaborators and one line about how I interact with them. 
+
+Public API and Key Messages
+
+- message one   
+- message two 
+- (for bonus points) how to create instances.
+
+   One simple example is simply gorgeous.
+ 
+Internal Representation and Key Implementation Points.
+
+    Instance Variables
+	floor:		<Object>
+
+
+    Implementation Points
+    
+----------------------------------------------
+----------------------------------------------
+Pharo 7 Instance/Class Side:
+---------------------------------------------- 
+Please comment me using the following template inspired by Class Responsibility Collaborator (CRC) design:
+
+For the Class part:  State a one line summary. For example, "I represent a paragraph of text".
+
+For the Responsibility part: Three sentences about my main responsibilities - what I do, what I know.
+
+For the Collaborators Part: State my main collaborators and one line about how I interact with them. 
+
+Public API and Key Messages
+
+- message one   
+- message two 
+- (for bonus points) how to create instances.
+
+   One simple example is simply gorgeous.
+ 
+Internal Representation and Key Implementation Points.
+
+    Instance Variables
+	door:		<Object>
+
+
+    Implementation Points
+----------------------------------------------
