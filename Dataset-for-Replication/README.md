@@ -20,12 +20,12 @@ Given the importance of high-quality code comments, we draw numerous implication
 # Description of the content:
 - **/Data** folder contains the data selected for analysing the class comments. The data is seperated according to each research question.
 
-	- **/Data/RQ1** contains the data selected to analyse code and comment changes of Pharo versions.
+	- **/Data/RQ1/** contains the data selected to analyse code and comment changes of Pharo versions.
 
-	- **/Data/RQ2** contains the data selected for manual analysis of Pharo external projects and Pharo core classes.
+	- **/Data/RQ2/** contains the data selected for manual analysis of Pharo external projects and Pharo core classes.
 
-	- **/Data/RQ3** contains the data for computing the comments adhering to the template in the content and the writing style aspects and various statistics performed on them. It also contains the raw version of the template text collected from all Pharo versions.
+	- **/Data/RQ3/** contains the data for computing the comments adhering to the template in the content and the writing style aspects and various statistics performed on them. It also contains the raw version of the template text collected from all Pharo versions.
 
-- **/Scripts** contains Pharo and R scripts to analyse the comments of all versions, and perform various statstics respectively.
+- **/Scripts/** contains Pharo and R scripts to analyse the comments of all versions, and perform various statstics respectively.
 
-- **/Tool-Moose-Pharo.zip** contains the tool, Moose, using which we conduct analysis on comments.
+- **/Tool-Moose-Pharo.zip** contains the tool, Moose, using which we conduct various analysis on comments.
